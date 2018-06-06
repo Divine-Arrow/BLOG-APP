@@ -1,0 +1,8 @@
+<h1>Index Page</h1>
+
+<% blogs.forEach(function(blog) { %>
+    <h2><%= blog.name %></h2>
+    <img src="<%= blog.image %>" alt="<%= blog.name + "image"%>">
+    <p><%= blog.body %> </p>
+    <p><%= blog.created %></p>
+<% }); %>
