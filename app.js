@@ -24,7 +24,7 @@ var blogSchema = new mongoose.Schema({
 
 var Blog = mongoose.model("Blog", blogSchema);
 
-//  RESTful routes
+//  RESTful route
 app.get("/", function(req, res) {
     res.redirect("/blogs");
 });
@@ -46,10 +46,15 @@ app.get("/blogs/new", function(req, res){
 });
 
 // CREATE route
-// app.post("/blogs", function(req, res) {
-//     res.render("");
-// });
-
+app.post("/blogs", function(req, res) {
+    Blog.create(req.body.blog, function(err, createdData) {
+        if(err) {
+            console.log("Error found : \n", err);
+        } else {
+            res.redirect("/blogs");
+        }
+    });
+});
 
 // listen
 app.listen(3000, function () {

@@ -5,7 +5,7 @@
 
         <% blogs.forEach(function(blog) { %>
             <h2>
-                <%= blog.name %>
+                <%= blog.title %>
             </h2>
             <img src="<%= blog.image %>" alt="<%= blog.name + " image "%>">
             <p>
@@ -17,4 +17,4 @@
             <% }); %>
     </div>
 
-<% include partials/fotter %>
+    <% include partials/fotter %>
