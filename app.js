@@ -24,6 +24,12 @@ var blogSchema = new mongoose.Schema({
 
 var Blog = mongoose.model("Blog", blogSchema);
 
+//  RESTful routes
+app.get("/", function(req, res) {
+    res.redirect("/blogs");
+});
+
+// Index route
 app.get("/blogs", function (req, res) {
     Blog.find({}, function (err, blogs) {
         if (err) {
@@ -34,7 +40,15 @@ app.get("/blogs", function (req, res) {
     });
 });
 
+// NEW route
+app.get("/blogs/new", function(req, res){
+    res.render("new");
+});
 
+// CREATE route
+// app.post("/blogs", function(req, res) {
+//     res.render("");
+// });
 
 
 // listen
