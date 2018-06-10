@@ -7,9 +7,9 @@
                 
                     <% blogs.forEach(function(blog) { %>
                         <div class="item">
-                        <div class="image">
+                        <a class="image" href="/blogs/<%= blog._id%>" >
                             <img class="image_cover" src="<%= blog.image %>" alt="<%= blog.title + " image "%>">
-                        </div>
+                        </a>
                         <div class="content">
                             <a class="header" href="/blogs/<%= blog._id%>"><%= blog.title %></a>
                             <div class="meta">
@@ -19,7 +19,10 @@
                                 <p><%- blog.body.substring(0,100) %> ...</p>
                             </div>
                             <div class="extra">
-                                <a class="ui label" href="/blogs/<%= blog._id%>">Read more</a>
+                                <a class="ui right floated positive button small" href="/blogs/<%= blog._id%>">
+                                  Read More
+                                  <i class="right chevron icon deafaullted"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
