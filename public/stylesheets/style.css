@@ -6,3 +6,18 @@ i.icon {
 .main.container {
     margin-top: 7em;
 }
+
+form#delete {
+    display: inline;
+}
+
+
+.ui.items > .item > .content > .header:not(.ui) {
+    font-size: 1.6em;
+}
+
+.image_cover {
+    object-fit: cover;
+    height: 100% !important;
+    width: 100% !important;
+}
