@@ -10,7 +10,7 @@ i.icon:not(.deafaullted) {
 }
 
 .ui.main.container.segment, .ui.divided.items.segment {
-    box-shadow: 1px 1px 25px 2px rgba(41, 41, 41, 0.12);
+    box-shadow: 1px 1px 25px 0px rgba(41, 41, 41, 0.12);
 }
 
 form#delete {

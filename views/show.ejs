@@ -5,7 +5,7 @@
         <div class="ui top attached">
             <div class="item">
                 <img class="ui image rounded afterImage" src="<%= blog.image %>" alt="<%= blog.title + " image "%>">
-                <div class="content"><span><%= blog.created.toDateString() %></span></div>
+                <div class="content"><span><strong><%= blog.created.toDateString() %></strong></span></div>
                 <div class="description afterImage">
                     <p><%- blog.body %></p>
                 </div>
